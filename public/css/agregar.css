@@ -1,0 +1,76 @@
+h1{
+    margin: auto;
+    padding: 20px;
+}
+
+.formulario {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+} 
+  
+.formulario input[type="text"],
+.formulario input[type="number"],
+.formulario input[type="date"],
+.formulario select{
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}  
+
+.formulario input[name="descripcion"] {
+    height: auto;
+}
+
+.formulario input[type="submit"] {
+    border-radius: 10px;
+    background-color: rgb(0, 81, 128);
+    color: #ffffff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    float: right;
+    margin: .5px 60px;
+    margin-bottom: 10px;
+    border: 4px solid rgb(0, 81, 128);
+    transition: background-color .1s, color .1s;
+}
+.formulario input[type="submit"]:hover {
+    background-color: white;
+    color:black
+}
+.formulario .estado {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.formulario a{
+    border-radius: 10px;
+    background-color: rgb(136, 14, 10);
+    color: #ffffff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    float: right;
+    margin: .5px 60px;
+    margin-bottom: 10px;
+    border: 4px solid rgb(136, 14, 10);
+    transition: background-color .1s, color .1s;
+    text-align: center;
+    text-decoration: none;
+}
+
+.formulario a:hover{
+    background-color: white;
+    color:black
+}

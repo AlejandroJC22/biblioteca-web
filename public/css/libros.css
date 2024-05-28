@@ -1,0 +1,131 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 15px; 
+}
+
+h1 {
+    margin: 0;
+}
+
+.boton-agregar {
+    border-radius: 10px;
+    background-color: green;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color .1s, color .1s;
+}
+
+.boton-agregar:hover {
+    background-color: white;
+    color: black;
+}
+
+p{
+    text-decoration: none;
+    color: black;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+main {
+    max-width: 1500px;
+    width: 95%;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    box-sizing: border-box;
+}
+
+main .card {
+    flex: 1 1 210px;
+    max-width: 300px;
+    text-align: center;
+    height: auto;
+    border: 1px solid lightgray;
+    background-color: white;
+    margin: 10px; 
+    box-sizing: border-box;
+}
+
+main .card .image {
+    height: auto;
+}
+
+main .card .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+main .card .caption {
+    padding-left: 1em;
+    text-overflow: clip;
+    font-size: larger;
+    text-align: left;
+    line-height: 1.8em;
+}
+
+main .card .caption p {
+    font-size: 1rem;
+}
+
+main a:hover{
+    transform: scale(1.1);
+}
+
+main .card a {
+    display: inline-block;
+    margin: 1em 0;
+    padding: 0.5em 1em;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+
+@media (max-width: 800px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    main .card {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        max-width: 100%;
+        margin: 10px 0;
+    }
+
+    main .card .image {
+        flex: 0 0 30%; /* Ajusta el ancho de la imagen según sea necesario */
+        margin: 5px 5px 0 5px; /* Quita el margen inferior de la imagen */
+        height: auto;
+    }
+
+    main .card .image img {
+        width: 100%;
+        height: auto;
+    }
+
+    main .card .caption {
+        flex: 1;
+        padding-left: 20px; /* Ajusta el espacio entre la imagen y el texto */
+        text-align: left;
+    }
+}
