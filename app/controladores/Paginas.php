@@ -1,6 +1,6 @@
 <?php 
 
-    class Paginas extends Controlador{
+    class Paginas extends CoreController{
 
         protected $usuarioModelo;
         protected $libroModelo;

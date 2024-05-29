@@ -1,7 +1,7 @@
 <?php
 
     //Crear clase controlador principal (carga los modelos y las vistas)
-    class Controlador{
+    class CoreController{
         //Cargar modelo
         public function modelo($modelo){
             require_once '../app/modelos/' . $modelo . '.php';
