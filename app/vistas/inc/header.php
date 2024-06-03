@@ -23,7 +23,7 @@
             <li><a class="hideOnMobile" href="<?php echo RUTA_URL; ?>/paginas/libros">Todos los libros</a></li>
             <li><a class="hideOnMobile" href="<?php echo RUTA_URL; ?>/paginas/prestamos">Prestamos realizados</a></li>
             <li><a class="hideOnMobile" href="<?php echo RUTA_URL; ?>/paginas/reportes">Generar reporte</a></li>
-            <li class="logout hideOnMobile"><a style="color: red;">Cerrar sesión</a></li>
+            <li class="logout hideOnMobile"><a style="color: red;" href="<?php echo RUTA_URL; ?>/paginas/cerrarSesion">Cerrar sesión</a></li>
             <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#fff"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
         </ul>
     </nav>

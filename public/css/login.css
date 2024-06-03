@@ -53,7 +53,7 @@ h3{
 
 input[type="text"]::placeholder,
 input[type="password"]::placeholder {
-    color: black;
+    color: white;
 }
 
 input[type="text"],

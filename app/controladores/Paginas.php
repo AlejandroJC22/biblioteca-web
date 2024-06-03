@@ -46,8 +46,7 @@
         public function cerrarSesion(){
             session_start();
             session_destroy();
-            // Redirige a la página de inicio de sesión
-            redireccionar(RUTA_URL . '/paginas/login');
+            $this->vista('paginas/login');
             exit;
         }
 
