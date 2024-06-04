@@ -13,7 +13,7 @@
         <aside>
             <img src="data:image/jpeg;base64,<?php echo base64_encode($datos['portada']); ?>" alt=""> 
             <button onclick="location.href='<?php echo RUTA_URL; ?>/paginas/editarLibro/<?php echo $datos['id'] ?>'">Editar</button>
-            <button class="delete">Borrar</button>              
+            <button class="delete" onclick="confirmDelete('<?php echo RUTA_URL; ?>/paginas/borrarLibro/<?php echo $datos['id'] ?>')">Borrar</button>              
         </aside>
         <div class="container">
             <h1 class="titulo"><?php echo $datos['titulo'];  ?></h1>
@@ -21,7 +21,7 @@
                 <img class="hide" src="data:image/jpeg;base64,<?php echo base64_encode($datos['portada']); ?>" alt=""> 
                 <div class="hide button-container">
                     <button class="buttom hide" onclick="location.href='<?php echo RUTA_URL; ?>/paginas/editarLibro/<?php echo $datos['id'] ?>'">Editar</button>
-                    <button class="buttom borrar hide">Borrar</button>
+                    <button class="buttom borrar hide" onclick="confirmDelete('<?php echo RUTA_URL; ?>/paginas/borrarLibro/<?php echo $datos['id'] ?>')">Borrar</button>
                 </div>
                 
             </div>
@@ -38,3 +38,11 @@
     </main>
 </body>
 </html>
+
+<script>
+function confirmDelete(url) {
+    if (confirm('¿Estás seguro de que deseas eliminar este libro?')) {
+        window.location.href = url; 
+    }
+}
+</script>

@@ -12,7 +12,7 @@
 
     <div>
         <h1 style="padding: 15px;">Editar Libro</h1>
-        <form action="<?php echo RUTA_URL?>/paginas/editarLibro/<?php echo $datos['id']; ?>" method="POST" class="formulario" id="validacionFormulario" enctype="multipart/form-data">
+        <form action="<?php echo RUTA_URL?>/paginas/editarLibro/<?php echo $datos['id']; ?>" method="POST" class="formulario" id="edicionLibro" enctype="multipart/form-data">
 
             <label for="portada">Portada: </label>
             <input type="file" name="imageUpload" id="imageUpload" accept="image/*" value="<?php echo base64_encode($datos['portada']);  ?>">

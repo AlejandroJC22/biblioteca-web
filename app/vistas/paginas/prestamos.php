@@ -35,7 +35,7 @@
                         <td><?php echo $prestamos->estado; ?></td>
                         <td>
                             <a href="<?php echo RUTA_URL;?>/paginas/editarPrestamo/<?php echo $prestamos->id;?>"><img class="img-t" src="<?php echo RUTA_URL;?>/img/editar-libro.jpg" alt="" title="Editar Libro"></a>
-                            <a href="<?php echo RUTA_URL;?>/paginas/borrar/<?php echo $prestamos->id;?>"><img class="img-t" src="<?php echo RUTA_URL;?>/img/eliminar-libro.jpg" alt="" title="Borrar Libro"></a>
+                            <a href="#" onclick="confirmDelete('<?php echo RUTA_URL;?>/paginas/borrarPrestamo/<?php echo $prestamos->id;?>')"><img class="img-t" src="<?php echo RUTA_URL;?>/img/eliminar-libro.jpg" alt="" title="Borrar Libro"></a>
                         </td>
                     </tr>    
                 <?php endforeach; ?>
@@ -46,3 +46,11 @@
     <?php require RUTA_APP . '/vistas/inc/footer.php'; ?>
 </body>
 </html>
+
+<script>
+function confirmDelete(url) {
+    if (confirm('¿Estás seguro de que deseas eliminar este prestamo?')) {
+        window.location.href = url; 
+    }
+}
+</script>

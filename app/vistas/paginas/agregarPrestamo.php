@@ -12,12 +12,12 @@
 
     <div>
         <h1 style="padding: 20px;">Agregar Nuevo Prestamo</h1>
-        <form action="<?php echo RUTA_URL?>/paginas/agregarPrestamo" method="POST" class="formulario" id="validacionFormulario">
+        <form action="<?php echo RUTA_URL?>/paginas/agregarPrestamo" method="POST" class="formulario" id="formularioPrestamo">
                 <label for="estudiante">Nombre del Estudiante: </label>
-                <input type="text" name="estudiante"><br>
+                <input type="text" name="estudiante" required><br>
 
                 <label for="libro">Nombre del Libro: </label>
-                <select name="libro" id="nombreLibro">
+                <select name="libro" id="nombreLibro" required>
                     <option value="">Selecciona una opción</option>
                     <?php foreach($datos['libro'] as $libro): ?>
                         <?php if ($libro->estado == 'Activo'): ?>
@@ -27,16 +27,16 @@
                 </select><br>
                         
                 <label for="cantidad">Cantidad de libros: </label>
-                <input type="number" name="cantidad"><br>
+                <input type="number" name="cantidad" required><br>
                 
                 <label for="fecha">Fecha de préstamo: </label>
-                <input type="date" name="fechaPrestamo" id="fecha-prestamo-input" min="">
+                <input type="date" name="fechaPrestamo" min="" required>
 
                 <label for="fecha">Fecha de devolución: </label>
-                <input type="date" name="fechaDevolucion" id="fecha-devolucion-input" min="">
+                <input type="date" name="fechaDevolucion" min="" required>
 
                 <label for="estado">Estado: </label>          
-                <select name="estado" class="estado">
+                <select name="estado" class="estado" required>
                     <option value="">Selecciona una opción</option>
                     <option value="Prestado">Prestado</option>
                     <option value="Devuelto">Devuelto</option>

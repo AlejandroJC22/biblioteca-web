@@ -56,6 +56,17 @@
                 return false;
             }
         }
+
+        public function eliminarLibro($id) {
+            $this->db->query('DELETE FROM libros WHERE id = :id');
+            $this->db->bind(':id', $id);
+
+            if ($this->db->execute()) {
+                return true;
+            } else {
+                return false;
+            }
+        }
     }
 
 ?>

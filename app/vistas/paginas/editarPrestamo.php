@@ -12,7 +12,7 @@
 
     <div>
         <h1 style="padding: 20px;">Editar Prestamo</h1>
-        <form action="<?php echo RUTA_URL?>/paginas/editarPrestamo/<?php echo $datos['id']; ?>" method="POST" class="formulario" id="validacionFormulario">
+        <form action="<?php echo RUTA_URL?>/paginas/editarPrestamo/<?php echo $datos['id']; ?>" method="POST" class="formulario" id="formularioPrestamo">
                 <label for="estudiante">Nombre del Estudiante: </label>
                 <input type="text" name="estudiante" value="<?php echo $datos['estudiante'];  ?>"><br>
 

@@ -163,6 +163,34 @@
                 $this->vista('paginas/editarLibro', $datos);
             }
         } 
+
+        public function viewLibros($id){
+
+            $libro = $this->libroModelo->obtenerLibroId($id);
+
+            $datos =[
+                'id' => $libro[0]->id,
+                'portada' => $libro[0]->portada,
+                'titulo' => $libro[0]->titulo,
+                'autor' => $libro[0]->autor,
+                'descripcion' => $libro[0]->descripcion,
+                'cantidad' => $libro[0]->cantidad,
+                'estado' => $libro[0]->estado,
+            ];
+
+            $this->vista('paginas/viewLibros', $datos);
+        }
+
+        public function borrarLibro($id) {
+            if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+                // Llamar al modelo para eliminar el libro por ID
+                if ($this->libroModelo->eliminarLibro($id)) {
+                    redireccionar('/paginas/libros');
+                } else {
+                    die('Algo salió mal');
+                }
+            }
+        }
         
         public function agregarPrestamo(){
             if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -176,12 +204,7 @@
                 ];
 
                 if ($this->prestamoModelo->nuevoPrestamo($datos)){
-
-                    // Restar la cantidad prestada del total de libros disponibles
-                    $idLibro = $datos['libro'];
-                    $cantidadPrestada = $datos['cantidad'];
-                    $this->libroModelo->restarCantidadLibros($idLibro, $cantidadPrestada);
-
+                    //Volver a la página si se guardaron los cambios
                     redireccionar('/paginas/prestamos');
                 }else{
                     die('Algo salió mal');
@@ -240,21 +263,15 @@
             }
         }
 
-        public function viewLibros($id){
-
-            $libro = $this->libroModelo->obtenerLibroId($id);
-
-            $datos =[
-                'id' => $libro[0]->id,
-                'portada' => $libro[0]->portada,
-                'titulo' => $libro[0]->titulo,
-                'autor' => $libro[0]->autor,
-                'descripcion' => $libro[0]->descripcion,
-                'cantidad' => $libro[0]->cantidad,
-                'estado' => $libro[0]->estado,
-            ];
-
-            $this->vista('paginas/viewLibros', $datos);
+        public function borrarPrestamo($id) {
+            if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+                // Llamar al modelo para eliminar el libro por ID
+                if ($this->prestamoModelo->eliminarPrestamo($id)) {
+                    redireccionar('/paginas/prestamos');
+                } else {
+                    die('Algo salió mal');
+                }
+            }
         }
     }
 
