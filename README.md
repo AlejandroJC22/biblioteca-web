@@ -25,7 +25,9 @@ Asegurate de editar lo que está entre comillas con el nombre de la carpeta que 
 Con esto, ya estariamos listos para probar la aplicación =)
 
 Parametros de ingreso:
+
 Usuario: admin
+
 Contraseña: admin
 
 
