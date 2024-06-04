@@ -69,4 +69,7 @@ td{
     .fechaDevolucion {
         display: none;
     }
+    .fechaPrestamo {
+        display: none;
+    }
 }

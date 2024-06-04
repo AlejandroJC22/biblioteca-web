@@ -17,10 +17,16 @@
         </aside>
         <div class="container">
             <h1 class="titulo"><?php echo $datos['titulo'];  ?></h1>
-
-            <h3> Resumen </h3>
+            <div class="responsive">
+                <img class="hide" src="data:image/jpeg;base64,<?php echo base64_encode($datos['portada']); ?>" alt=""> 
+                <div class="hide button-container">
+                    <button class="buttom hide" onclick="location.href='<?php echo RUTA_URL; ?>/paginas/editarLibro/<?php echo $datos['id'] ?>'">Editar</button>
+                    <button class="buttom borrar hide">Borrar</button>
+                </div>
+                
+            </div>
+            <h3 class="resumen"> Resumen </h3>
             <p class="descripcion"><?php echo $datos['descripcion']; ?></p>
-
             <h3 class="info">Información del libro</h3>
             <p class="autor"><strong>Autor:</strong> <?php echo $datos['autor']; ?></p>
             <p class="cantidad"><strong>Cantidad:</strong> <?php echo $datos['cantidad']; ?></p>

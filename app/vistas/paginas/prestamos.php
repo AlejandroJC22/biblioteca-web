@@ -19,8 +19,8 @@
                 <th>Estudiante</th>
                 <th>Libro</th>
                 <th>Cantidad</th>
-                <th>Fecha Prestamo</th>
-                <th>Fecha Devolucion</th>
+                <th class="fechaPrestamo">Fecha Prestamo</th>
+                <th class="fechaDevolucion">Fecha Devolucion</th>
                 <th>Estado</th>
                 <th>Acciones</th>
             </thead>
@@ -30,7 +30,7 @@
                         <td><?php echo $prestamos->estudiante; ?></td>
                         <td><?php echo $prestamos->libro; ?></td>
                         <td><?php echo $prestamos->cantidad; ?></td>
-                        <td><?php echo $prestamos->fechaPrestamo; ?></td>
+                        <td class="fechaPrestamo"><?php echo $prestamos->fechaPrestamo; ?></td>
                         <td class="fechaDevolucion"><?php echo $prestamos->fechaDevolucion; ?></td>
                         <td><?php echo $prestamos->estado; ?></td>
                         <td>
